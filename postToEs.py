@@ -25,8 +25,8 @@ def createCustomAnalyzer():
             "analyzer": {
                 "html_text": {
                     "tokenizer": "standard",
-                    "filter": ["standard", "lowercase"],
-                    "char": ["html_strip"]
+                    "filter": ["standard", "lowercase", "stop", "snowball"],
+                    "char_filter": ["html_strip"]
                 }
             }
         }
